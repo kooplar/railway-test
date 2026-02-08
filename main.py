@@ -16,3 +16,8 @@ def ping():
 @app.get("/health")
 def health():
     return {"status": "healthy"}
+
+
+@app.get("/echo")
+def echo(q: str = ""):
+    return {"echo": q}
