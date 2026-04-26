@@ -12,6 +12,14 @@ Visit:
 - http://127.0.0.1:8000/
 - http://127.0.0.1:8000/ping
 
+## Database migrations
+Run locally (uses SQLite by default):
+```bash
+alembic upgrade head
+```
+
+If you have `DATABASE_URL` set (e.g., Railway Postgres), Alembic will use it.
+
 ## Deploy on Railway
 Start command:
 ```

@@ -62,11 +62,6 @@ def _database_url() -> str:
 engine = create_engine(_database_url())
 
 
-@app.on_event("startup")
-def startup():
-    Base.metadata.create_all(bind=engine)
-
-
 @app.get("/items")
 def list_items():
     with Session(engine) as session:
